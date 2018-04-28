@@ -10,6 +10,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.appindexing.Action;
@@ -26,6 +27,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        TextView textView = findViewById(R.id.tvText);
+
 
         FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
@@ -39,6 +42,11 @@ public class MainActivity extends AppCompatActivity {
         Intent appLinkIntent = getIntent();
         String appLinkAction = appLinkIntent.getAction();
         Uri appLinkData = appLinkIntent.getData();
+        try{
+            textView.setText(" Hello : "+appLinkData);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
         Toast.makeText(this,"Uri "+appLinkData,Toast.LENGTH_SHORT).show();
     }
 

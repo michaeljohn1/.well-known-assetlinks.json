@@ -14,14 +14,13 @@
             android:name=".MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
-            <tools:validation testUrl="http://akamahesh.github.io/Memoria-web" />
+            <tools:validation testUrl="http://akamahesh.herokuapp.com/contact.html" />
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-
             <intent-filter android:autoVerify="true">
                 <action android:name="android.intent.action.VIEW" />
 
@@ -30,9 +29,10 @@
 
                 <data
                     android:scheme="http"
-                    android:host="akamahesh.github.io"
-                    android:pathPattern="/Memoria-web" />
+                    android:host="akamahesh.herokuapp.com"
+                    android:pathPattern="/contact.html" />
             </intent-filter>
+
         </activity>
     </application>
 

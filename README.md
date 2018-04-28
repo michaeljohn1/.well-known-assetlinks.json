@@ -57,7 +57,7 @@ Now Google Search can take into account the actions your users take on public an
 
 
 > how to test it ?
-1. Installing this app in your phone.
+1. Install https://github.com/akamahesh/Firebase-App-Indexing/blob/master/app-debug.apk this app in your phone.
 2. open http://akamahesh.herokuapp.com/app-indexing.html url in browser of your app.
 3. Click on Contact Us link
 4. It should open app and show url as a toast in your phone

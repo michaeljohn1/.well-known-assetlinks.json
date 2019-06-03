@@ -14,13 +14,18 @@
             android:name=".MainActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
-            <tools:validation testUrl="http://akamahesh.herokuapp.com/contact.html" />
+            <!--<tools:validation testUrl="http://akamahesh.herokuapp.com/contact.html" -->
+            <tools:validation
+                testUrl="https://sites.google.com/view/nuktay-kurdy/home"
+                tools:ignore="TestAppLink" />
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+
+
             <intent-filter android:autoVerify="true">
                 <action android:name="android.intent.action.VIEW" />
 
@@ -28,9 +33,9 @@
                 <category android:name="android.intent.category.BROWSABLE" />
 
                 <data
-                    android:scheme="http"
-                    android:host="akamahesh.herokuapp.com"
-                    android:pathPattern="/contact.html" />
+                    android:scheme="https"
+                    android:host="github.com"
+                    android:pathPrefix="/michaeljohn1/english_arabic/tree/master" />
             </intent-filter>
 
         </activity>

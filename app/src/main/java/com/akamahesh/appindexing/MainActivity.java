@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         TextView textView = findViewById(R.id.tvText);
@@ -43,7 +44,7 @@ public class MainActivity extends AppCompatActivity {
         String appLinkAction = appLinkIntent.getAction();
         Uri appLinkData = appLinkIntent.getData();
         try{
-            textView.setText(" Hello : "+appLinkData);
+            textView.setText(" GORAN : " + appLinkData);
         }catch (Exception e){
             e.printStackTrace();
         }
@@ -77,7 +78,7 @@ public class MainActivity extends AppCompatActivity {
      * See https://g.co/AppIndexing/AndroidStudio for more information.
      */
     public Action getIndexApiAction() {
-        return Actions.newView("Main", "http://akamahesh.herokuapp.com");
+        return Actions.newView("Main", "https://sites.google.com/view/nuktay-kurdy/home");
     }
 
     @Override
@@ -86,7 +87,7 @@ public class MainActivity extends AppCompatActivity {
 
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
-        FirebaseAppIndex.getInstance().update(new Indexable.Builder().setName("Main").setUrl("http://akamahesh.herokuapp.com").build());
+        FirebaseAppIndex.getInstance().update(new Indexable.Builder().setName("Main").setUrl("https://sites.google.com/view/nuktay-kurdy/home").build());
         FirebaseUserActions.getInstance().start(getIndexApiAction());
     }
 
